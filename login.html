@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #111;
+      color: white;
+    }
+
+    .login-box {
+      background: #222;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #00ffcc;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 12px 0px;
+      margin: 10px 0 20px;
+      border: none;
+      border-radius: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px 1px;
+      border: none;
+      background: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: black;
+      color: whitesmoke;
+    }
+
+    .error {
+      color: orange;
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+    
+
+  <div class="login-box">
+    <h2 style="color: whitesmoke">WGS Master</h2>
+    <h2>Login</h2>
+    <input
+      type="email"
+      id="emailInput"
+      placeholder="Enter your email"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+    />
+    <button onclick="login()">Login</button>
+    <div class="error" id="errorMsg"></div>
+  </div>
+
+  <script>
+    // ✅ Ganti ini dengan daftar email yang diizinkan
+    const allowedEmails = [
+      "knightthekingz69",
+      "tbaresconi78@gmail.com"
+    ];
+
+    function login() {
+      const email = document.getElementById("emailInput").value.trim().toLowerCase();
+      const error = document.getElementById("errorMsg");
+
+       if (allowedEmails.includes(email)) {
+    window.location.href = "https://wgsmaster.glide.page/dl/17171d";         // ⬅️ baru redirect
+  } else {
+    error.textContent = "Access denied.";
+  }
+}
+    const emailInput = document.getElementById("emailInput");
+  emailInput.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      e.preventDefault(); // mencegah form submit default (jika ada)
+      login();            // panggil fungsi login
+    }
+  });
+  </script>
+
+</body>
+</html>
