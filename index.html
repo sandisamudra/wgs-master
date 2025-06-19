@@ -219,7 +219,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: white; /* akan ditimpa berdasarkan preferensi */
+  background: whitesmoke; /* akan ditimpa berdasarkan preferensi */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -345,6 +345,15 @@
     background: black;
     color: white;
   }
+  .header-main nav {
+    background-color: whitesmoke;
+  }
+  .menu-toggle {
+    color: black;
+  }
+  header h1 {
+  color: whitesmoke;
+}
 }
 
 /* --- MODE GELAP (jika sistem pengguna pakai Dark Mode) --- */
@@ -360,7 +369,13 @@
     background: white;
     color: black;
   }
-}
+  .header-main nav {
+    background-color: black;
+  }
+  .menu-toggle {
+    color: whitesmoke;
+  }
+
 
 /* --- GAYA DASAR --- */
 body {
@@ -368,7 +383,7 @@ body {
   color: var(--text-color);
 }
 header h1 {
-  color: var(--accent-color);
+  color: whitesmoke;
 }
 nav a {
   color: var(--text-color);
@@ -376,6 +391,8 @@ nav a {
 nav a:hover {
   color: var(--accent-color);
 }
+}
+  
 #scrollToTop {
  position: fixed;
   bottom: 30px;
