@@ -271,11 +271,11 @@
   .menu-toggle {
     display: block;
     font-size: 26px;
+    color: white;
     background: none;
     border: none;
     align-self: flex-end;
     cursor: pointer;
-    color: black !important;
   }
   button:active {
   transform: scale(0.98);
@@ -334,49 +334,47 @@
   }
   
   /* --- MODE TERANG (jika sistem pengguna pakai Light Mode) --- */
-@media (prefers-color-scheme: light) {
+ @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: whitesmoke !important;
-    --text-color: black !important;
-    --accent-color: #007acc;
+    --bg-color: whitesmoke;
+    --text-color: black;
+    --accent-color: #00ffcc;
     --nav-bg: rgba(255, 255, 255, 0.9);
   }
    #splash-screen {
-    background: black;
-    color: white;
+    background: whitesmoke;
+    color: black;
   }
   .header-main nav {
     background-color: whitesmoke;
   }
   .menu-toggle {
-    color: whitesmoke !important;
+    color: whitesmoke;
   }
-  header h1 {
-  color: whitesmoke;
-}
+  
 }
 
 /* --- MODE GELAP (jika sistem pengguna pakai Dark Mode) --- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: black !important;
-    --text-color: whitesmoke !important;
+    --bg-color: #000;
+    --text-color: whitesmoke;
     --accent-color: #00ffcc;
     --nav-bg: rgba(0, 0, 0, 0.8);
     
   }
   #splash-screen {
-    background: white;
-    color: black;
+    background: black;
+    color: whitesmoke;
   }
   .header-main nav {
     background-color: black;
   }
   .menu-toggle {
-    color: whitesmoke !important;
+    color: whitesmoke;
   }
 
-
+}
 /* --- GAYA DASAR --- */
 body {
   background-color: var(--bg-color);
@@ -391,7 +389,7 @@ nav a {
 nav a:hover {
   color: var(--accent-color);
 }
-}
+
   
 #scrollToTop {
  position: fixed;
