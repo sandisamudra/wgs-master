@@ -271,7 +271,7 @@
   .menu-toggle {
     display: block;
     font-size: 26px;
-    color: white;
+    color: white !important;
     background: none;
     border: none;
     align-self: flex-end;
@@ -336,7 +336,7 @@
   /* --- MODE TERANG (jika sistem pengguna pakai Light Mode) --- */
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: whitesmoke;
+    --bg-color: whitesmoke !important;
     --text-color: black !important;
     --accent-color: #007acc;
     --nav-bg: rgba(255, 255, 255, 0.9);
@@ -349,7 +349,7 @@
     background-color: whitesmoke;
   }
   .menu-toggle {
-    color: black !important;
+    color: whitesmoke !important;
   }
   header h1 {
   color: whitesmoke;
@@ -359,7 +359,7 @@
 /* --- MODE GELAP (jika sistem pengguna pakai Dark Mode) --- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #000;
+    --bg-color: black !important;
     --text-color: whitesmoke !important;
     --accent-color: #00ffcc;
     --nav-bg: rgba(0, 0, 0, 0.8);
