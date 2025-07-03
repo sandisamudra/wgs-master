@@ -23,7 +23,7 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       line-height: 1.6;
       color: #fff;
       background-color: #000;
@@ -31,11 +31,17 @@
     .logo {
     opacity: 0;
     transform: translateY(-20px);
-    animation: logoIn 0.5s ease-out forwards;
+    animation: logoIn 1s ease-out forwards;
   }
   .splash-logo {
     display: none;
   }
+
+  .content h2 {
+     line-height: 1;
+     font-size: 50px;
+  }
+
   /* Animasi keyframe */
 @keyframes logoIn {
   to {
@@ -101,6 +107,8 @@
       font-size: 20px;
     }
 
+    
+
     section.visible {
       opacity: 1;
       transform: translateY(0);
@@ -131,12 +139,12 @@
     /* PARALLAX SECTION */
     .hero-parallax {
       position: relative;
-      height: 120vh;
+      height: 100vh;
       overflow: hidden;
     }
 
     .parallax-bg {
-      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.4)),
                     url("assets/Background.jpg");
       background-position: center;
       background-repeat: no-repeat;
@@ -207,7 +215,20 @@
 
 
     @media (max-width: 932px) {
- 
+
+      header h1 {
+      font-size: 20px;
+   }
+
+   .hero-parallax {
+    height: 100vh;
+   }
+
+    .content h2 {
+     line-height: 1;
+     font-size: 40px;
+  }
+
    section {
     text-align: left;
     font-size: 5px;
@@ -334,13 +355,9 @@
   }
   
   /* --- MODE TERANG (jika sistem pengguna pakai Light Mode) --- */
- @media (prefers-color-scheme: light) {
-  :root {
-    --bg-color: whitesmoke;
-    --text-color: black;
-    --accent-color: #00ffcc;
-    --nav-bg: rgba(255, 255, 255, 0.9);
-  }
+@media (prefers-color-scheme: light) {
+ 
+  
    #splash-screen {
     background: whitesmoke;
     color: black;
@@ -351,18 +368,23 @@
   .menu-toggle {
     color: whitesmoke;
   }
+
+  /* --- GAYA DASAR --- */
+header h1 {
+  color: whitesmoke;
+}
+nav a {
+  color: black !important ;
+}
+nav a:hover {
+  color: var(--accent-color);
+}
   
 }
 
 /* --- MODE GELAP (jika sistem pengguna pakai Dark Mode) --- */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #000;
-    --text-color: whitesmoke;
-    --accent-color: #00ffcc;
-    --nav-bg: rgba(0, 0, 0, 0.8);
-    
-  }
+  
   #splash-screen {
     background: black;
     color: whitesmoke;
@@ -376,15 +398,11 @@
 
 }
 /* --- GAYA DASAR --- */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
 header h1 {
   color: whitesmoke;
 }
 nav a {
-  color: var(--text-color);
+  color: whitesmoke;
 }
 nav a:hover {
   color: var(--accent-color);
@@ -478,7 +496,7 @@ nav a:hover {
 
 <section class="section" id="contact">
   <h2>Contact Us</h2>
-  <p>Email us at: contact@example.com or call us at +123-456-7890</p>
+  <p>Email us at: warnaglobalsupp@gmail.com or call us at 021 5010 6260 (652)</p>
 </section>
 
 <footer>
