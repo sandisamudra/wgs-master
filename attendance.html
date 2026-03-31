@@ -36,17 +36,13 @@ function submitForm() {
 </script>
 <!-- OneSignal -->
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-
 <script>
-window.OneSignalDeferred = window.OneSignalDeferred || [];
-OneSignalDeferred.push(async function(OneSignal) {
-  await OneSignal.init({
-    appId: "c44d8767-7b06-4d32-87b0-5ec88947f33e",
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "c44d8767-7b06-4d32-87b0-5ec88947f33e",
+    });
   });
-
-  // paksa tampilkan popup
-  OneSignal.showSlidedownPrompt();
-});
 </script>
 
 </body>
